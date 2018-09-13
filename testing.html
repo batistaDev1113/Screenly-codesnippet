@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    body{
+      margin: 0;
+    }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width: 100vw;
+    height: 100vh;
+    
+  }
+
+  .inner-box{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0px 91px 0px 91px;
+    -moz-border-radius: 0px 91px 0px 91px;
+    -webkit-border-radius: 0px 91px 0px 91px;
+    border: 0px solid #000000;
+    max-width: 90%;
+
+  }
+  q{
+    font-size: 2rem;
+  }
+  
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="inner-box">
+        <q id="#printQuotes"></q>
+    </div>
+        
+  
+  </div>
+    
+ 
+
+
+    <script>
+ 
+      setInterval(function (){
+    // array of quotes
+    let quotes = ['There is nothing permanent except change.','Let us sacrifice our today so that our children can have a better tomorrow.', 'Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.','Every goal, every action, every thought, every feeling one experiences, whether it be consciously or unconsciously known, is an attempt to increase one’s level of peace of mind.', 'A good head and a good heart are always a formidable combination.', 'Without hard work, nothing grows but weeds.','Learning never exhausts the mind.', 'If you cannot do great things, do small things in a great way.' ];
+    
+    let quotesRand = Math.floor(Math.random() * quotes.length);
+    
+    // guessing there is a div with a h3 element with id of printQuotes
+    
+    // write to element
+    document.querySelector('q').innerHTML = quotes[quotesRand];
+    console.dir(quotes[quotesRand]);
+    }, 3000
+); 
+    
+    
+      </script>
+</body>
+ 
+
+
+</html>
